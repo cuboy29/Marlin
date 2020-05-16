@@ -1825,7 +1825,7 @@
 // The number of lineear moves that can be in the planner at once.
 // The value of BLOCK_BUFFER_SIZE must be a power of 2 (e.g. 8, 16, 32)
 #if ANY(SKR13, SKR14, SKR14Turbo, SKRPRO11) || DISABLED(EXTENSIBLE_UI)
-  #define BLOCK_BUFFER_SIZE 16
+  #define BLOCK_BUFFER_SIZE 64  
 #else
   #define BLOCK_BUFFER_SIZE 8
 #endif
@@ -1837,7 +1837,7 @@
 #if ENABLED(MachineCR10Orig) //melzi has more ram than a 2560
   #define BUFSIZE 16
 #elif ANY(SKR13, SKR14, SKR14Turbo, SKRPRO11)
-  #define BUFSIZE 8
+  #define BUFSIZE 64
 #else
   #define BUFSIZE 4
 #endif
@@ -2301,7 +2301,7 @@
   #endif
 
   #if AXIS_IS_TMC(E0)
-    #define E0_CURRENT      730
+    #define E0_CURRENT      1200
     #define E0_MICROSTEPS    16
     #define E0_RSENSE         0.11
     #define E0_CHAIN_POS     -1
@@ -3176,7 +3176,7 @@
   #define CUSTOM_USER_MENU_TITLE "Leveling Tools"
 
   #if ENABLED(BedDC)
-    #define CommBedTmp "55"
+    #define CommBedTmp "60"
   #else
     #define CommBedTmp "75"
   #endif
