@@ -6,7 +6,7 @@
 
 // Standard Atmega2560 machines (No bootloader required)
 
-//#define MachineEnder5Plus
+#define MachineEnder5Plus
 //#define MachineEnder4
 //#define MachineCR20 //Buzzer doesnt work
 //#define MachineCR20Pro
@@ -146,16 +146,16 @@
 
 //#define SKR13 // 32 bit board - assumes 2208 drivers
 //#define SKR14
-//#define SKR14Turbo
+#define SKR14Turbo
 //#define SKRPRO11
 
 //#define I2C_EEPROM  // use I2C EEPROM on SRK PRO v1.1 e.g AT24C256
 //#define SKR14_PowerLossKit // Bigtreetech power loss kit for SKR14
 
-//#define SKR_2209
-//#define SKR_UART // Configure SKR board with drivers in UART mode
+#define SKR_2209
+#define SKR_UART // Configure SKR board with drivers in UART mode
 //#define SKR13_ReverseSteppers // Some users reported directions backwards than others on SKR with various drivers.
-//#define DualZ // Uses 5th driver on CRX or SKR boards as Z2
+#define DualZ // Uses 5th driver on CRX or SKR boards as Z2
 
  /*
   *
@@ -178,7 +178,7 @@
    Standard is recommended in most other scenarios.
 */
 //#define MeshFast
-//#define MeshStd
+#define MeshStd
 //#define MeshFine
 //#define MeshExtreme
 
@@ -1771,7 +1771,7 @@
 #elif ANY(MachineCR10Orig, SKR13, SKR14, SKR14Turbo) && DISABLED(SKR13_ReverseSteppers)
   #define INVERT_X_DIR true
   #define INVERT_Y_DIR true
-  #define INVERT_Z_DIR false
+  #define INVERT_Z_DIR true
   #if(ENABLED(E3DTitan))
     #define INVERT_E0_DIR false
     #define INVERT_E1_DIR true
