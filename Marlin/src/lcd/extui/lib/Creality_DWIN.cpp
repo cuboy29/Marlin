@@ -767,7 +767,7 @@ SERIAL_ECHOLN(PSTR("BeginSwitch"));
       {
         InforShowStatus = false;
         CardRecbuf.recordcount = -1;
-        RTS_SDCardUpate(false, false);
+        RTS_SDCardUpate(false, true);
         SERIAL_ECHOLN("Handle Data PrintFile 1 Setting Screen ");
         RTS_SndData(ExchangePageBase + 46, ExchangepageAddr);
       }
