@@ -936,9 +936,9 @@
       #define DEFAULT_Ki 2.17
       #define DEFAULT_Kd 73.44
     #elif ENABLED(MachineEnder5Plus)
-      #define  DEFAULT_Kp 14.72
-      #define  DEFAULT_Ki 0.89
-      #define  DEFAULT_Kd 61.22
+      #define  DEFAULT_Kp 18.53 //14.72
+      #define  DEFAULT_Ki 1.48 //0.89
+      #define  DEFAULT_Kd 58.10 //61.22
     #elif ENABLED(MachineCRX)
       #define DEFAULT_Kp 19.00
       #define DEFAULT_Ki 1.40
@@ -1307,7 +1307,7 @@
 #elif ENABLED(MachineCR2020)
   #define EStepsmm 113
 #else
-  #define EStepsmm 98.5  //set this to match your printer
+  #define EStepsmm 139 //98.5  //set this to match your printer
 #endif
 
 #if ENABLED(MachineEnder5Plus)
@@ -1622,7 +1622,7 @@
 #elif ENABLED(MicroswissDirectDrive) && ENABLED(ABL_BLTOUCH)
   #define NOZZLE_TO_PROBE_OFFSET { -45, -5, 0 }
 #elif (ENABLED(ABL_BLTOUCH) && ENABLED(HotendStock))
-  #define NOZZLE_TO_PROBE_OFFSET { -41, -8, 0 }
+  #define NOZZLE_TO_PROBE_OFFSET { -41, -17, 0 }  //was -41,-8,0
 #elif ((ANY(ABL_EZABL, ABL_NCSW)) && ENABLED(HotendStock))
   #if ENABLED(CREALITY_ABL_MOUNT)
     #define NOZZLE_TO_PROBE_OFFSET { -55, -15, 0 }
