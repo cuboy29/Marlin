@@ -1023,9 +1023,9 @@
     #define  DEFAULT_bedKi 111.47
     #define  DEFAULT_bedKd 1068.83
   #else
-    #define  DEFAULT_bedKp 35.33  //calibrated value for my machine
-    #define  DEFAULT_bedKi 7.06
-    #define  DEFAULT_bedKd 117.83
+    #define  DEFAULT_bedKp 35.43  //calibrated value for my machine
+    #define  DEFAULT_bedKi 6.71
+    #define  DEFAULT_bedKd 124.69
     //#define  DEFAULT_bedKp 690.34
     //#define  DEFAULT_bedKi 111.47
     //#define  DEFAULT_bedKd 1068.83
