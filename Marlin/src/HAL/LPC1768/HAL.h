@@ -51,6 +51,11 @@ extern "C" volatile uint32_t _millis;
 // i2c uses 8-bit shifted address
 #define I2C_ADDRESS(A) ((A) << 1)
 
+// Add strcmp_P if missing
+#ifndef strcmp_P 
+  #define strcmp_P(a, b) strcmp((a), (b))
+#endif
+
 //
 // Default graphical display delays
 //
