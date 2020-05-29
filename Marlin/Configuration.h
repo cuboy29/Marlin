@@ -936,9 +936,9 @@
       #define DEFAULT_Ki 2.17
       #define DEFAULT_Kd 73.44
     #elif ENABLED(MachineEnder5Plus)
-      #define  DEFAULT_Kp 18.53 //14.72
-      #define  DEFAULT_Ki 1.48 //0.89
-      #define  DEFAULT_Kd 58.10 //61.22
+      #define  DEFAULT_Kp 19.03 // these are calibrated for my printer //14.72 
+      #define  DEFAULT_Ki 1.51 //0.89
+      #define  DEFAULT_Kd 60.0 //61.22
     #elif ENABLED(MachineCRX)
       #define DEFAULT_Kp 19.00
       #define DEFAULT_Ki 1.40
@@ -1000,6 +1000,8 @@
 #if NONE(MachineCR10Orig, LowMemoryBoard) || ENABLED(MelziHostOnly)
   #define PIDTEMPBED
 #endif
+
+
 //#define BED_LIMIT_SWITCHING
 
 /**
@@ -1021,9 +1023,12 @@
     #define  DEFAULT_bedKi 111.47
     #define  DEFAULT_bedKd 1068.83
   #else
-    #define  DEFAULT_bedKp 690.34
-    #define  DEFAULT_bedKi 111.47
-    #define  DEFAULT_bedKd 1068.83
+    #define  DEFAULT_bedKp 35.43  //calibrated value for my machine
+    #define  DEFAULT_bedKi 6.71
+    #define  DEFAULT_bedKd 124.69
+    //#define  DEFAULT_bedKp 690.34
+    //#define  DEFAULT_bedKi 111.47
+    //#define  DEFAULT_bedKd 1068.83
   #endif
 
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
